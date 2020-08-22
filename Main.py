@@ -3,6 +3,7 @@ from OpenGL.GLUT import *
 from OpenGL.GLU import *
 import sys
 from DDA import DDA
+from BresenhamLine import *
 
 def init(width,height):
     glClearColor(0.0,0.0,0.0,1.0)
@@ -11,15 +12,15 @@ def init(width,height):
 
 def display():
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT)
-    DDA((0,0),(640,400))
-    DDA((0,400),(640,0))
+    BresenhamLine((0,0),(640,480))
+    
     
 
 glutInit(sys.argv)
 glutInitDisplayMode(GLUT_RGBA)
 
 width = 640
-height = 400
+height = 480
 
 glutInitWindowSize(width,height)
 wind = glutCreateWindow("OpenGL")
