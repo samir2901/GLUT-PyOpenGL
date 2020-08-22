@@ -2,8 +2,9 @@ from OpenGL.GL import *
 from OpenGL.GLUT import *
 from OpenGL.GLU import *
 import sys
-from DDA import DDA
+from DDA import *
 from BresenhamLine import *
+from MidPointCircle import *
 
 def init(width,height):
     glClearColor(0.0,0.0,0.0,1.0)
@@ -12,7 +13,10 @@ def init(width,height):
 
 def display():
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT)
+    DDA((0,480),(640,0))
     BresenhamLine((0,0),(640,480))
+    midPointCircle((320,240),200)
+    
     
     
 
