@@ -13,12 +13,14 @@ def init(width,height):
 
 def display():
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT)
-    DDA((0,480),(640,0))
-    BresenhamLine((0,0),(640,480))
-    midPointCircle((320,240),200)
-    
-    
-    
+    BresenhamLine((300, 300), (100, 300))
+    BresenhamLine((100, 300), (100, 100))
+    BresenhamLine((100, 100), (300, 100))
+    BresenhamLine((300, 100), (300, 300))
+    BresenhamLine((300, 100), (100, 300))
+    BresenhamLine((100, 100), (300, 300))   
+
+
 
 glutInit(sys.argv)
 glutInitDisplayMode(GLUT_RGBA)
@@ -31,4 +33,3 @@ wind = glutCreateWindow("OpenGL")
 init(width,height)
 glutDisplayFunc(display)
 glutMainLoop()
-
