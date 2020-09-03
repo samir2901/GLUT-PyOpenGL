@@ -16,7 +16,7 @@ def midPointCircle(center, radius):
     p = 1 - radius
     glBegin(GL_POINTS)
     drawPoints(center[0],center[1],x,y)
-    while x < y:
+    while x <= y:
         x += 1
         if p < 0:
             p = p + 2 * x + 1

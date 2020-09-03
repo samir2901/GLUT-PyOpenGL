@@ -1,7 +1,7 @@
 from OpenGL.GL import *
 from OpenGL.GLUT import *
 from OpenGL.GLU import *
-
+from Dot import *
 
 def DDA(start,end):
     x, y = start[0], start[1]
@@ -9,12 +9,9 @@ def DDA(start,end):
     dy = end[1] - start[1]
     steps = max(dx,dy)
     xinc = dx/steps
-    yinc = dy/steps
-    glBegin(GL_POINTS)
-    glVertex2d(round(x),round(y))
+    yinc = dy/steps    
+    drawDot(int(x+0.5),int(y+0.5))   
     for i in range(steps):
         x += xinc
         y += yinc
-        glVertex2d(round(x),round(y))
-    glEnd()
-    glFlush()
+        drawDot(int(x+0.5),int(y+0.5))   

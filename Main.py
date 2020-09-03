@@ -5,20 +5,23 @@ import sys
 from DDA import *
 from BresenhamLine import *
 from MidPointCircle import *
+from RegressionPlot import *
+from Dot import *
 
 def init(width,height):
-    glClearColor(0.0,0.0,0.0,1.0)
+    glClearColor(1.0,1.0,1.0,1.0)
     glColor3f(1.0,1.0,1.0)
     gluOrtho2D(0,width,0,height)
 
 def display():
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT)
-    BresenhamLine((300, 300), (100, 300))
-    BresenhamLine((100, 300), (100, 100))
-    BresenhamLine((100, 100), (300, 100))
-    BresenhamLine((300, 100), (300, 300))
-    BresenhamLine((300, 100), (100, 300))
-    BresenhamLine((100, 100), (300, 300))   
+    #midPointCircle((100,100),50)
+    #midPointCircle((200,200),100)
+    #midPointCircle((300,300),150)
+    draw()
+    #drawDot(100,80)
+    #glFlush()
+
 
 
 
