@@ -1,6 +1,7 @@
 from OpenGL.GL import *
 
 def drawDot(x, y):
-    glBegin(GL_POINTS)
+    glPointSize(1.5)
+    glBegin(GL_POINTS)    
     glVertex2i(x, y)
     glEnd()
